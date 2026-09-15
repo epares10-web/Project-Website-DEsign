@@ -6,6 +6,41 @@
     <title>Personal Portfolio | 5-Day Vlog Series</title>
     <!-- Link to External CSS -->
     <link rel="stylesheet" href="style/style.css">
+    <style>
+        /* Purple Gradient Animated Background */
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background: linear-gradient(-45deg, #2e0854, #4a154b, #6b11b0, #a124db);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Flexbox Layout to Automatically Center Remaining Cards */
+        .vlog-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .vlog-card {
+            flex: 1 1 300px;
+            max-width: 360px;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,30 +48,28 @@
     <header class="hero">
         <div class="profile-container">
             <!-- Profile Image -->
-            <img src="https://uploads.onecompiler.io/445d6295r/1789032875051/marsiecakes.jpg
-" alt="Profile Picture" class="profile-pic">
-            <h1>My Personal Vlog Portfolio &#128105</h1>
-            <p>Welcome to my 5-Day  "A Day in My Life" Vlog Series!</p>
+            <img src="https://uploads.onecompiler.io/445d6295r/1789032875051/marsiecakes.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>My Personal Vlog Portfolio &#128105;</h1>
+            <p>Welcome to my 5-Day "A Day in My Life" Vlog Series!</p>
         </div>
     </header>
 
     <!-- Main Content: Vlog Series -->
     <main class="container">
-        <h2 class="section-title">5-Day &#x1F4C5 "A Day in My Life" Vlog Series</h2>
+        <h2 class="section-title">5-Day &#x1F4C5; "A Day in My Life" Vlog Series</h2>
         
         <div class="vlog-grid">
 
             <!-- Day 1 -->
             <article class="vlog-card">
                 <div class="video-wrapper">
-                    <video controls poster="day1-thumbnail.jpg">
-    <video controls width="100%">
-  <source src="vlog-day1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+                    <video controls width="100%">
+                        <source src="eme.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="vlog-content">
-                    <h3>Day 1: Morning Routine & Productivity</h3>
+                    <h3>Day 1</h3>
                     <p>Starting off the week with a solid morning routine, coffee, and setting goals for the week ahead.</p>
                 </div>
             </article>
@@ -50,7 +83,7 @@
                     </video>
                 </div>
                 <div class="vlog-content">
-                    <h3>Day 2: Work, Coding & Projects</h3>
+                    <h3>Day 2</h3>
                     <p>A look into my daily workspace, managing projects, coding sessions, and staying focused.</p>
                 </div>
             </article>
@@ -64,7 +97,7 @@
                     </video>
                 </div>
                 <div class="vlog-content">
-                    <h3>Day 3: Mid-Week Fitness & Health</h3>
+                    <h3>Day 3</h3>
                     <p>Taking a break from work to hit the gym, prepare healthy meals, and recharge energy levels.</p>
                 </div>
             </article>
@@ -78,7 +111,7 @@
                     </video>
                 </div>
                 <div class="vlog-content">
-                    <h3>Day 4: Creative Time & Hobbies</h3>
+                    <h3>Day 4</h3>
                     <p>Exploring new creative hobbies, graphic design, and brainstorming ideas for future content.</p>
                 </div>
             </article>
@@ -92,7 +125,7 @@
                     </video>
                 </div>
                 <div class="vlog-content">
-                    <h3>Day 5: Weekend Chill & Wrap-Up</h3>
+                    <h3>Day 5</h3>
                     <p>Reflecting on the week, unwinding with friends, and preparing for a relaxing weekend.</p>
                 </div>
             </article>
