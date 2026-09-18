@@ -58,7 +58,6 @@ body {
 }
 
 .hero h1 {
-  /* Scales dynamically between 1.8rem and 2.5rem based on screen width */
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 800;
   margin-bottom: 0.5rem;
@@ -78,7 +77,7 @@ body {
   max-width: 1200px;
   margin: clamp(1.5rem, 4vw, 3rem) auto;
   padding: 0 1rem;
-  flex: 1; /* Keeps footer pinned to the bottom if content is short */
+  flex: 1;
 }
 
 .section-title {
@@ -96,15 +95,15 @@ body {
 .vlog-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centers items in incomplete rows */
+  justify-content: center;
   gap: clamp(1.25rem, 3vw, 2.5rem);
   width: 100%;
 }
 
 /* Vlog Cards with Enhanced Glassmorphism & Fixed Sizing */
 .vlog-card {
-  flex: 1 1 300px; /* Allows growth/shrinkage with a base width of 300px */
-  max-width: 360px; /* Prevents cards from stretching excessively on large screens */
+  flex: 1 1 280px;
+  max-width: 320px; /* Sized for portrait video cards */
   background: var(--card-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -140,12 +139,16 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Video Styling for HTML5 video or Responsive iframe embeds */
+/* Updated Video Styling for Portrait Vlogs */
 .video-wrapper {
-  aspect-ratio: 16 / 9; /* Maintains video aspect ratio automatically */
+  aspect-ratio: 9 / 16; /* Matches portrait orientation */
+  max-height: 480px; /* Keeps card height controlled */
   background-color: #000;
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .video-wrapper video,
@@ -153,7 +156,7 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
-  object-fit: cover;
+  object-fit: contain; /* Prevents zooming or cropping */
   display: block;
   transition: transform 0.4s ease;
 }
@@ -204,7 +207,7 @@ footer {
 
   .vlog-card:hover video,
   .vlog-card:hover iframe {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 
   .vlog-card:hover .vlog-content h3 {
